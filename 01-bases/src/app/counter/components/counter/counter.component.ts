@@ -1,31 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
-  template: `<h1 > {{ title }} </h1>
-        <h2> Counter: {{ counter }} </h2>
-  <hr>
-
-  <button (click)="increaseBy(1)"> +1 </button>
-  <button (click)="resetCounter()"> Reset </button>
-  <button (click)="increaseBy(-1)"> -1 </button>`
-
+  template: ` <h3>Counter: {{ counter }}</h3>
+    <div>
+      <button (click)="increaseBy(1)" class="btn btn-primary me-2">+1</button>
+      <button class="btn btn-warning me-2" (click)="resetCounter()">
+        Reset
+      </button>
+      <button (click)="increaseBy(-1)" class="btn btn-danger">-1</button>
+    </div>`,
 })
-
 export class CounterComponent {
-  public title: string = 'Angular v.01';
   public counter: number = 10;
 
-  constructor() { }
-
-
-
-  increaseBy( value: number ):void {
+  increaseBy( value: number ): void {
     this.counter += value;
   }
 
-  resetCounter():void {
+  resetCounter(): void {
     this.counter = 10;
   }
-
 }
