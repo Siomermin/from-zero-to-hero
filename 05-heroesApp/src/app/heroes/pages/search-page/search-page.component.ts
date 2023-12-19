@@ -17,6 +17,7 @@ export class SearchPageComponent {
   constructor(private heroesService: HeroesService) {}
 
   searchHero() {
+
     const value: string = this.searchInput.value || '';
 
     this.heroesService
