@@ -13,7 +13,7 @@ export class SideMenuComponent {
     { title: 'Switches', route: './reactive/switches' },
   ];
 
-  public autheMenu: MenuItem[] = [
+  public authMenu: MenuItem[] = [
     { title: 'Registro', route: './auth' },
 
   ];
